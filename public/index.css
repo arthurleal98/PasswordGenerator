@@ -1,0 +1,23 @@
+body, html{
+    background-color: #145DA0;
+    height: 100%; 
+    
+}
+#root{
+    margin-bottom: 15vh;
+    height: 100%;
+    background-color: #145DA0;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+#block-Contents{
+    background-color: #0C2D48;
+    height: 100%;
+
+}
+#root-div{
+    height: 100%;
+}
+
+p{
+    margin:0 !important
+}
