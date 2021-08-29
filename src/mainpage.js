@@ -2,10 +2,11 @@ import PasswordGen from "./generator"
 
 const Main = ()=>{
     const styleDivMain= {
-        height:'100%',
+        width:'50%',
+        height:'auto',
         paddingBottom:'15vh',
         display:'block',
-        paddingTop:'10vh'
+        paddingTop:'10vh',       
         
     }    
     const styleH1={
@@ -17,12 +18,12 @@ const Main = ()=>{
         height:'100%'
     }
     return(
-        <div style={styleDivMain}>        
-            <div  className='container text-center'>
+        <div style={styleDivMain} className='container'>        
+            <div  className='container text-center d-block'>
                 <div style={styleTeste} >
                     <div className=' rounded' id='block-Contents'>
-                        <h1 style={styleH1} className='text-white py-5'>Random Password Generator</h1>
-                        <div style={styleTeste}>
+                        <h1 style={styleH1} className='text-white py-5 px-3'>Random Password Generator</h1>
+                        <div style={styleTeste} className='px-3'>
                             <PasswordGen/>
 
                         </div>

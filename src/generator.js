@@ -63,35 +63,39 @@ const PasswordGen = ()=>{
         fontSize:'18px'
     }
     const stylePass={
-        backgroundColor:'#2E8BC0'
+        backgroundColor:'#2E8BC0',
+        
+        
     }
     return(
         <div className='container  align-items-center justify-content-center py-3' style={styleMain}>
             
             <div className=' px-5 pt-5 pb-4 rounded  container' style={styleContents}>
                     <label><h3>Password</h3></label>
-                    <div className="d-flex justify-content-center rounded text-white = shadow-lg" style={stylePass}>
-                        <p className='py-3 text-wrap px-3' style={styleP}>{password}</p>
-
+                    <div className="container rounded text-white shadow-lg" style={stylePass}>
+                            <p className=' py-3 text-wrap px-3' style={styleP}>{password}</p>
                     </div>
-                    <div id='checkTypes' className='d-flex flex-column  justify-content-center py-3'>
-                        <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="checkbox" id="inlineCheckbox1" checked={number} onChange={(e)=>{setNumber(e.target.checked)}}/>
-                            <label className="form-check-label" >Numbers</label>
+                    <div id='checkTypes' className='d-flex   justify-content-center py-3'>
+                        <div className='d-flex flex-column '>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="checkbox" id="inlineCheckbox1" checked={number} onChange={(e)=>{setNumber(e.target.checked)}}/>
+                                <label className="form-check-label" >Numbers</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="checkbox" id="inlineCheckbox2" checked={special} onChange={(e)=>{setSpecial(e.target.checked)}}/>
+                                <label className="form-check-label" >Special character</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="checkbox" id="inlineCheckbox3" checked={upper} onChange={(e)=>{setUpper(e.target.checked)}}/>
+                                <label className="form-check-label" >Upper Case</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="number" id="inlineNumber" min='6' max='100' onChange={(e)=>{setCharacters(`&len=${e.target.value}`)}}/>
+                                <label className="form-check-label" >Characters</label>
+                            </div>
                         </div>
-                        <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="checkbox" id="inlineCheckbox2" checked={special} onChange={(e)=>{setSpecial(e.target.checked)}}/>
-                            <label className="form-check-label" >Special character</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="checkbox" id="inlineCheckbox3" checked={upper} onChange={(e)=>{setUpper(e.target.checked)}}/>
-                            <label className="form-check-label" >Upper Case</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="number" id="inlineNumber" min='6' max='100' onChange={(e)=>{setCharacters(`&len=${e.target.value}`)}}/>
-                            <label className="form-check-label" >Characters</label>
-                        </div>
-                
+
+                    
                     </div>
                     <div>
                         <button className='btn btn-primary' onClick={()=>{submitbutton()}}>Generate</button>
